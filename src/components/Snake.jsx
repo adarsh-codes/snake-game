@@ -6,8 +6,8 @@ const Snake = ({segment}) => {
     {
         segment.map((segment, index) => {
           return (
-            <div key={index} className="snake absolute bg-green-500 w-4 h-4" style={{left: `${segment[0]}%`, top: `${segment[1]}%`, width: '2%',
-            height: '2%',position:''}}></div>
+            <div key={index} className="snake absolute bg-green-500 w-4 h-4" style={{left: `${segment[0]}%`, top: `${segment[1]}%`, width: '15px',
+            height: '15px',position:''}}></div>
           )
         })
     }

@@ -19,7 +19,7 @@ const GameBoard = () => {
   const [snakesegment,setsnakesegment] = useState([0,0],[2,0]);
   const [food,setfood] = useState(getrandomcoordinates());
   const [direction,setdirection] = useState("RIGHT");
-  const [speed,setspeed] = useState(100);
+  const [speed,setspeed] = useState(60);
   const [gameover,setgameover] = useState(false);
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
@@ -47,16 +47,16 @@ const GameBoard = () => {
     let newHead;
     switch (direction) {
       case 'RIGHT':
-        newHead = [head[0] + 2, head[1]];
+        newHead = [head[0] + 1, head[1]];
         break;
       case 'LEFT':
-        newHead = [head[0] - 2, head[1]];
+        newHead = [head[0] - 1, head[1]];
         break;
       case 'DOWN':
-        newHead = [head[0], head[1] + 2];
+        newHead = [head[0] , head[1] + 1];
         break;
       case 'UP':
-        newHead = [head[0], head[1] - 2];
+        newHead = [head[0] , head[1] - 1];
         break;
       default:
         newHead = head;
@@ -133,7 +133,7 @@ useEffect(() => {
       setfood(getrandomcoordinates());
       setScore(score + 1);
       enlargeSnake();
-      setspeed(speed - 10);
+      setspeed(speed - 5);
     }
   };
 

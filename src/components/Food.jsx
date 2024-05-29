@@ -7,8 +7,8 @@ const Food = ({food}) => {
     style={{
       left: `${food[0]}%`,
       top: `${food[1]}%`,
-      width: '1%',
-      height: '2%',
+      width: '15px',
+      height: '15px',
     }}
   ></div>
   )
